@@ -12,7 +12,7 @@
     <div class="todo-create">
         <form action="/todos" method="post" class="todo-create__form">
             @csrf
-            <input type="text" name="text">
+            <input type="text" name="content">
             <button type="submit">作成</button>
         </form>
     </div>
@@ -23,7 +23,7 @@
         
         <div class="todo-list__item">
             <form action="/todos/update" method="patch" class="todo-list__update">
-                <input type="text" name="text" value="ここに作成したTodoが入ります。">
+                <input type="text" name="content" value="ここに作成したTodoが入ります。">
                 <button type="submit" class="todo-list__submit">更新</button>
             </form>
             <form action="/todos/delete" method="delete">
