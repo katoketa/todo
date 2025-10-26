@@ -1,0 +1,86 @@
+.message__success {
+    max-width: 1230px;
+    margin: 0 auto;
+    color: #0f5132;
+    background-color: #d1e7dd;
+    padding: 10px 20px;
+}
+
+.todo {
+    max-width: 800px;
+    margin: 50px auto;
+    width: 70%;
+}
+
+.todo-create {
+    margin: 0 auto;
+}
+
+.todo-create__form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-create input {
+    border: 1px solid #ddd;
+    width: 70%;
+    height: 40px;
+}
+
+.todo-create button {
+    width: 100px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 3px;
+    margin-left: 10%;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.todo-list {
+    margin: 30px auto 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.todo-list__title {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.todo-list__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+.todo-list__update {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.todo-list__update input {
+    font-size: 12px;
+    width: 80%;
+    border-width: 0;
+    outline: none;
+}
+
+.todo-list__submit {
+    appearance: none;
+    width: 48px;
+    margin-left: 10px;
+    background-color: #00f;
+    color: #fff;
+    border-width: 0;
+    border-radius: 3px;
+    padding: 7px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.todo-list__submit--delete {
+    background-color: #f00;
+}
