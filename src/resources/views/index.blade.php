@@ -5,9 +5,11 @@
 @endsection
 
 @section('content')
+@if(session('message'))
 <div class="message__success">
-    Todoを作成しました
+    {{ session('message') }}
 </div>
+@endif
 <div class="todo">
     <div class="todo-create">
         <form action="/todos" method="post" class="todo-create__form">
