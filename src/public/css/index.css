@@ -3,7 +3,23 @@
     margin: 0 auto;
     color: #0f5132;
     background-color: #d1e7dd;
-    padding: 10px 20px;
+    padding: 10px 0;
+}
+
+.message__success ul {
+    margin: 0;
+}
+
+.message__error {
+    max-width: 1230px;
+    margin: 0 auto;
+    color: #842029;
+    background-color: #f8d7da;
+    padding: 10px 0;
+}
+
+.message__error ul {
+    margin: 0;
 }
 
 .todo {

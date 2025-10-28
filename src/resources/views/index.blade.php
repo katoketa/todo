@@ -7,7 +7,18 @@
 @section('content')
 @if(session('message'))
 <div class="message__success">
-    {{ session('message') }}
+    <ul>
+        <li>{{ session('message') }}</li>
+    </ul>
+</div>
+@endif
+@if($errors->any())
+<div class="message__error">
+    @foreach($errors->all() as $error)
+    <ul>
+        <li>{{ $error }}</li>
+    </ul>
+    @endforeach
 </div>
 @endif
 <div class="todo">
