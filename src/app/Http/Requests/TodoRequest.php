@@ -28,7 +28,7 @@ class TodoRequest extends FormRequest
         ];
     }
 
-    public function message()
+    public function messages()
     {
         return [
             'content.required' => 'Todoを入力してください',
