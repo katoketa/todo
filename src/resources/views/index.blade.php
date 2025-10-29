@@ -35,13 +35,15 @@
         </div>
         @foreach($todos as $todo)
         <div class="todo-list__item">
-            <form action="/todos/update" method="patch" class="todo-list__update">
+            <form action="/todos/update" method="post" class="todo-list__update">
+                @method('PATCH')
                 @csrf
                 <input type="hidden" name="id" value="{{ $todo->id }}">
                 <input type="text" name="content" value="{{ $todo->content }}">
                 <button type="submit" class="todo-list__submit">更新</button>
             </form>
             <form action="/todos/delete" method="delete">
+                @csrf
                 <button type="submit" class="todo-list__submit todo-list__submit--delete">削除</button>
             </form>
         </div>
