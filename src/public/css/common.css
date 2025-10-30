@@ -5,10 +5,13 @@
 }
 
 .header__inner {
+    padding: 15px 10px;
+}
+
+.header-utilities {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10px;
 }
 
 .header__logo {
@@ -18,7 +21,7 @@
     font-size: 24px;
 }
 
-.header__category {
+.header-nav__link {
     text-decoration: none;
     color: #fff;
     margin-right: 40px;
