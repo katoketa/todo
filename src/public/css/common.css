@@ -5,6 +5,9 @@
 }
 
 .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px 10px;
 }
 
@@ -13,4 +16,11 @@
     color: #fff;
     font-weight: bold;
     font-size: 24px;
+}
+
+.header__category {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 40px;
+    font-size: 13px;
 }
