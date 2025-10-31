@@ -1,0 +1,107 @@
+.message__success {
+    color: #0f5132;
+    background: #d1e7dd;
+    padding: 10px;
+}
+
+.alert__error {
+    color: #842029;
+    background: #f8d7da;
+    padding: 10px;
+}
+
+.category-content {
+    max-width: 800px;
+    width: 70%;
+    margin: 50px auto 0;
+
+}
+
+.create-form {
+    display: flex;
+    margin: 0 auto;
+}
+
+.create-form__input {
+    width: 70%;
+}
+
+.create-form__input input {
+    width: 100%;
+    height: 30px;
+}
+
+.create-form__submit {
+    width: 100px;
+    margin-left: 50px;
+}
+
+.create-form__submit button {
+    width: 100%;
+    color: #fff;
+    background: #000;
+    border-radius: 3px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.category-table {
+    margin: 50px auto 0;
+    width: 100%;
+}
+
+.category-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.category-table td {
+    padding: 5px;
+}
+
+.category-table th {
+    text-align: left;
+}
+
+.update-form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.update-form__input {
+    width: 70%;
+}
+
+.update-form__input input {
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.update-form__submit button {
+    color: #fff;
+    background: #00f;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.delete-form__td {
+    width: 60px;
+}
+
+.delete-form__submit {
+    text-align: left;
+}
+
+.delete-form__submit button {
+        color: #fff;
+        background: #f00;
+        border: none;
+        border-radius: 3px;
+        padding: 5px 10px;
+        width: 50px;
+        cursor: pointer;
+}
