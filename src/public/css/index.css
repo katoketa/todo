@@ -32,35 +32,35 @@
     margin: 0 auto 30px;
 }
 
-.todo-form__title {
+.section__title {
 
 }
 
-.todo-form__form {
+.create-form, .search-form {
     display: flex;
     justify-content: space-between;
 }
 
-.todo-form__items {
+.create-form__item, .search-form__item {
     display: flex;
     width: 70%;
 }
 
-.todo-form__items input {
+.create-form__item input, .search-form__item input {
     border: 1px solid #ddd;
     width: 60%;
     height: 40px;
     margin-right: 10px;
 }
 
-.todo-form__items select {
+.create-form__item select, .search-form__item select {
     border: 1px solid #ddd;
     width: 40%;
     height: 40px;
 
 }
 
-.todo-form button {
+.create-form button, .search-form button {
     width: 100px;
     background-color: #000;
     color: #fff;
@@ -77,12 +77,14 @@
 
 .todo-list__titles {
     display: flex;
+    align-items: center;
+    width: 90%;
 }
 
 .todo-list__title {
     font-weight: bold;
     padding: 10px;
-    width: 50%;
+    width: 65%;
 }
 
 .todo-list__item {
@@ -101,7 +103,7 @@
 
 .todo-list__update-items {
     display: flex;
-    width:100%;
+    width:80%;
 }
 
 .todo-list__update-items input {
@@ -109,11 +111,12 @@
     width: 65%;
     border-width: 0;
     outline: none;
+    margin-right: 10px;
 }
 
 .todo-list__update-items select {
     font-size: 12px;
-    width: 35%;
+    width: 150px;
     border: none;
     outline: none;
 }

@@ -23,14 +23,14 @@
 @endif
 <div class="todo">
     <div class="todo-form">
-        <div class="todo-form__title">
+        <div class="section-title">
             <h3>
                 新規作成
             </h3>
         </div>
-        <form action="/todos" method="post" class="todo-form__form">
+        <form action="/todos" method="post" class="create-form">
             @csrf
-            <div class="todo-form__items">
+            <div class="create-form__item">
                 <input type="text" name="content">
                 <select name="category_id">
                     @foreach($items['categories'] as $category)
@@ -42,14 +42,14 @@
         </form>
     </div>
     <div class="todo-form">
-        <div class="todo-form__title">
+        <div class="section__title">
             <h3>
                 Todo検索
             </h3>
         </div>
-        <form action="/todos/search" method="post" class="todo-form__form">
+        <form action="/todos/search" method="post" class="search-form">
             @csrf
-            <div class="todo-form__items">
+            <div class="search-form__item">
                 <input type="text" name="content">
                 <select name="category_id">
                     @foreach($items['categories'] as $category)
@@ -57,7 +57,7 @@
                     @endforeach
                 </select>
             </div>
-            <button type="submit">作成</button>
+            <button type="submit">検索</button>
         </form>
     </div>
     <div class="todo-list">
