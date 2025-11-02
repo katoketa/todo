@@ -1,3 +1,8 @@
+.category__alert {
+    max-width: 1230px;
+    margin: 0 auto;
+}
+
 .category__alert--success {
     color: #0f5132;
     background: #d1e7dd;
@@ -12,6 +17,7 @@
 
 .category__alert--danger ul {
     margin: 0;
+    padding-left: 20px;
 }
 
 .category-content {
