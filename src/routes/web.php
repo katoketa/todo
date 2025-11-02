@@ -23,4 +23,5 @@ Route::delete('/todos/delete', [TodoController::class, 'destroy']);
 Route::group(['prefix' => '/categories'], function () {
     Route::get('', [CategoryController::class, 'index']);
     Route::post('', [CategoryController::class, 'store']);
+    Route::patch('/update', [CategoryController::class, 'update']);
 });
