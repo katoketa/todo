@@ -5,15 +5,14 @@
 @endsection
 
 @section('content')
-@if(session('message'))
 <div class="category__alert">
-
+@if(session('message'))
     <div class="category__alert--success">
         {{ session('message') }}
     </div>
     @endif
     @if($errors->any())
-    <div class="category__alert--denger">
+    <div class="category__alert--danger">
         <ul>
             @foreach( $errors->all() as $error)
             <li>{{ $error }}</li>
