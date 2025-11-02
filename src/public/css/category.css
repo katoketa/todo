@@ -1,13 +1,17 @@
-.message__success {
+.category__alert--success {
     color: #0f5132;
     background: #d1e7dd;
     padding: 10px;
 }
 
-.alert__error {
+.category__alert--danger {
     color: #842029;
     background: #f8d7da;
     padding: 10px;
+}
+
+.category__alert--danger ul {
+    margin: 0;
 }
 
 .category-content {
@@ -19,24 +23,25 @@
 
 .create-form {
     display: flex;
+    justify-content: space-between;
     margin: 0 auto;
 }
 
-.create-form__input {
+.create-form__item {
     width: 70%;
 }
 
-.create-form__input input {
+.create-form__item-input {
     width: 100%;
     height: 30px;
 }
 
-.create-form__submit {
+.create-form__button {
     width: 100px;
     margin-left: 50px;
 }
 
-.create-form__submit button {
+.create-form__button-submit {
     width: 100%;
     color: #fff;
     background: #000;
@@ -50,35 +55,42 @@
     width: 100%;
 }
 
-.category-table tr {
+.category-table__inner {
+    width: 100%;
+}
+
+.category-table__row {
     border-bottom: 1px solid #ddd;
 }
 
-.category-table td {
+.category-table__header {
+    text-align: left;
+}
+
+.category-table__item {
     padding: 5px;
 }
 
-.category-table th {
-    text-align: left;
+.category-table__item--delete {
+    width: 50px;
 }
 
 .update-form {
     display: flex;
     justify-content: space-between;
-    width: 100%;
 }
 
-.update-form__input {
+.update-form__item {
     width: 70%;
 }
 
-.update-form__input input {
+.update-form__item-input {
     width: 100%;
     border: none;
     outline: none;
 }
 
-.update-form__submit button {
+.update-form__button-submit {
     color: #fff;
     background: #00f;
     border: none;
@@ -88,15 +100,11 @@
     cursor: pointer;
 }
 
-.delete-form__td {
-    width: 60px;
+.delete-form__button {
+    width: 50px;
 }
 
-.delete-form__submit {
-    text-align: left;
-}
-
-.delete-form__submit button {
+.delete-form__button-submit {
         color: #fff;
         background: #f00;
         border: none;
