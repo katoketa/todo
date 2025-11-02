@@ -77,7 +77,7 @@
                 <div class="todo-list__update-items">
                     <input type="hidden" name="id" value="{{ $todo['id'] }}">
                     <input type="text" name="content" value="{{ $todo['content'] }}">
-                    <select name="category_id" value="$todo->category->getName()">
+                    <select name="category_id">
                         @foreach($items['categories'] as $category)
                         <option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
                         @endforeach

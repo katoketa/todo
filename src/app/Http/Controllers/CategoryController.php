@@ -7,8 +7,16 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
-    public function test()
+    public function index()
     {
-        return 0;
+        $categories = Category::all();
+        return view('category', compact('categories'));
+    }
+
+    public function store(Request $request)
+    {
+        $category = $request->only('name');
+        Category::create($category);
+        return redirect('/categories')->with('message', 'カテゴリを作成しました');
     }
 }

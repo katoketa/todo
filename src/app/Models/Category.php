@@ -17,4 +17,9 @@ class Category extends Model
     {
         return $this->hasMany(Todo::class);
     }
+
+    public function getName()
+    {
+        return $this->name;
+    }
 }
