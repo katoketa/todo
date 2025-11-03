@@ -31,9 +31,9 @@
         <form action="/todos" method="post" class="create-form">
             @csrf
             <div class="create-form__item">
-                <input type="text" name="content">
+                <input type="text" name="content" value="{{ old('content') }}">
                 <select name="category_id">
-                    @foreach($items['categories'] as $category)
+                    @foreach($categories as $category)
                     <option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
                     @endforeach
                 </select>
@@ -52,7 +52,7 @@
             <div class="search-form__item">
                 <input type="text" name="content">
                 <select name="category_id">
-                    @foreach($items['categories'] as $category)
+                    @foreach($categories as $category)
                     <option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
                     @endforeach
                 </select>
@@ -69,7 +69,7 @@
                 カテゴリ
             </div>
         </div>
-        @foreach($items['todos'] as $todo)
+        @foreach($todos as $todo)
         <div class="todo-list__item">
             <form action="/todos/update" method="post" class="todo-list__update">
                 @method('PATCH')

@@ -13,11 +13,10 @@ class TodoController extends Controller
     {
         $todos = Todo::all();
         $categories = Category::all();
-        $items = [
+        return view('index', [
             'todos' => $todos,
             'categories' => $categories,
-        ];
-        return view('index', compact('items'));
+        ]);
     }
 
     public function store(TodoRequest $request)
