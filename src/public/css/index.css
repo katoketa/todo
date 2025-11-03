@@ -98,12 +98,14 @@
 .todo-list__update {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 90%;
 }
 
 .todo-list__update-items {
     display: flex;
-    width:80%;
+    align-items: center;
+    width: 80%;
 }
 
 .todo-list__update-items input {
@@ -114,7 +116,7 @@
     margin-right: 10px;
 }
 
-.todo-list__update-items select {
+.todo-list__update-items p {
     font-size: 12px;
     width: 150px;
     border: none;
@@ -124,6 +126,7 @@
 .todo-list__submit {
     appearance: none;
     width: 48px;
+    height: 40px;
     margin-left: 10px;
     background-color: #00f;
     color: #fff;
