@@ -35,4 +35,12 @@ class TodoController extends Controller
         Todo::find($request['id'])->delete();
         return redirect('/')->with('message', 'Todoを削除しました');
     }
+
+    public function search(Request $request)
+    {
+        $todos = Todo::with('category')->CategorySearch($request->category_id)->KeywordSearch($request->keyword)->get();
+        $categories = Category::with('todos')->get();
+
+        return view('index', compact('todos', 'categories'));
+    }
 }

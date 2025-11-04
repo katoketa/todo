@@ -47,10 +47,9 @@
                 Todo検索
             </h3>
         </div>
-        <form action="/todos/search" method="post" class="search-form">
-            @csrf
+        <form action="/todos/search" method="get" class="search-form">
             <div class="search-form__item">
-                <input type="text" name="content">
+                <input type="text" name="keyword" value="{{ old('keyword') }}">
                 <select name="category_id">
                     @foreach($categories as $category)
                     <option value="{{ $category['id'] }}">{{ $category['name'] }}</option>

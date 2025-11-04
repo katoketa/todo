@@ -19,6 +19,7 @@ Route::get('/', [TodoController::class, 'index']);
 Route::post('/todos', [TodoController::class, 'store']);
 Route::patch('/todos/update', [TodoController::class, 'update']);
 Route::delete('/todos/delete', [TodoController::class, 'destroy']);
+Route::get('/todos/search', [TodoController::class, 'search']);
 
 Route::group(['prefix' => '/categories'], function () {
     Route::get('', [CategoryController::class, 'index']);
