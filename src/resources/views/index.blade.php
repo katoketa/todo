@@ -31,9 +31,9 @@
         <form action="/todos" method="post" class="create-form">
             @csrf
             <div class="create-form__item">
-                <input type="text" name="content">
+                <input type="text" name="content" value="{{ old('content') }}">
                 <select name="category_id">
-                    @foreach($items['categories'] as $category)
+                    @foreach($categories as $category)
                     <option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
                     @endforeach
                 </select>
@@ -47,12 +47,11 @@
                 Todo検索
             </h3>
         </div>
-        <form action="/todos/search" method="post" class="search-form">
-            @csrf
+        <form action="/todos/search" method="get" class="search-form">
             <div class="search-form__item">
-                <input type="text" name="content">
+                <input type="text" name="keyword" value="{{ old('keyword') }}">
                 <select name="category_id">
-                    @foreach($items['categories'] as $category)
+                    @foreach($categories as $category)
                     <option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
                     @endforeach
                 </select>
@@ -69,7 +68,7 @@
                 カテゴリ
             </div>
         </div>
-        @foreach($items['todos'] as $todo)
+        @foreach($todos as $todo)
         <div class="todo-list__item">
             <form action="/todos/update" method="post" class="todo-list__update">
                 @method('PATCH')
@@ -77,7 +76,7 @@
                 <div class="todo-list__update-items">
                     <input type="hidden" name="id" value="{{ $todo['id'] }}">
                     <input type="text" name="content" value="{{ $todo['content'] }}">
-                    <p>{{ $todo->category->getName() }}</p>
+                    <p>{{ $todo['category']['name'] }}</p>
                 </div>
                 <button type="submit" class="todo-list__submit">更新</button>
             </form>
