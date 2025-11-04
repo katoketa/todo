@@ -77,7 +77,7 @@
                 <div class="todo-list__update-items">
                     <input type="hidden" name="id" value="{{ $todo['id'] }}">
                     <input type="text" name="content" value="{{ $todo['content'] }}">
-                    <p>{{ $todo->category->getName() }}</p>
+                    <p>{{ $todo['category']['name'] }}</p>
                 </div>
                 <button type="submit" class="todo-list__submit">更新</button>
             </form>

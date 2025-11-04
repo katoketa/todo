@@ -57,7 +57,8 @@
     border: 1px solid #ddd;
     width: 40%;
     height: 40px;
-
+    appearance: none;
+    padding-left: 10px;
 }
 
 .create-form button, .search-form button {
